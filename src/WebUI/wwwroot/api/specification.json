@@ -1,0 +1,134 @@
+{
+  "x-generator": "NSwag v13.19.0.0 (NJsonSchema v10.9.0.0 (Newtonsoft.Json v13.0.0.0))",
+  "openapi": "3.0.0",
+  "info": {
+    "title": "CleanArchitecture API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/TableAllData": {
+      "get": {
+        "tags": [
+          "TableAllData"
+        ],
+        "operationId": "TableAllData_GetTableData",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TableDtoVm"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TableEvenNum": {
+      "get": {
+        "tags": [
+          "TableEvenNum"
+        ],
+        "operationId": "TableEvenNum_GetTableEven",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TableDtoVm"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/TableOddNum": {
+      "get": {
+        "tags": [
+          "TableOddNum"
+        ],
+        "operationId": "TableOddNum_GetTableOdd",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TableDtoVm"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "TableDtoVm": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "surname": {
+            "type": "string"
+          },
+          "givenName": {
+            "type": "string"
+          },
+          "contactNo": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "col_1": {
+            "type": "string"
+          },
+          "noOfMember": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "expenseMonth1": {
+            "type": "string"
+          },
+          "expenseMonth2": {
+            "type": "string"
+          },
+          "expenseMonth3": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "JWT": {
+        "type": "apiKey",
+        "description": "Type into the textbox: Bearer {your JWT token}.",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "JWT": []
+    }
+  ]
+}
